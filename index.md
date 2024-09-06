@@ -1,7 +1,3 @@
----
-layout: jekyll-theme-minimal
-title: Multi Channel High Voltage Pulse Generator Board
----
 
 # Multi Channel High Voltage Pulse Generator Board
 
