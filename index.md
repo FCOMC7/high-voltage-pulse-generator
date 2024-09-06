@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: jekyll-theme-minimal
 title: Multi Channel High Voltage Pulse Generator Board
 ---
 

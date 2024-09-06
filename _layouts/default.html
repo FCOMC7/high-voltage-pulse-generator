@@ -3,42 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1><a href="{{ site.baseurl | relative_url }}">{{ site.title }}</a></h1>
-      <nav>
-        <ul>
-          {% for item in site.navigation %}
-            <li>
-              <a href="{{ item.link | relative_url }}">{{ item.title }}</a>
-              {% if item.subnav %}
-                <ul>
-                  {% for subitem in item.subnav %}
-                    <li><a href="{{ subitem.link | relative_url }}">{{ subitem.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
+    <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | absolute_url }}">Home</a></li>
+        <li><a href="{{ "/testpage1" | absolute_url }}">Full bridge single-phase inverter</a>
+          <ul>
+            <li><a href="{{ "/Schematic" | absolute_url }}">Schematic of Circuit</a></li>
+            <li><a href="{{ "/Layout" | absolute_url }}">Layout of Circuit</a></li>
+            <li><a href="{{ "/Datasheet" | absolute_url }}">Assembly PCB</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ "/testpage5" | absolute_url }}">Control PCB</a>
+          <ul>
+            <li><a href="{{ "/schematic2" | absolute_url }}">General Schematic</a></li>
+            <li><a href="{{ "/assembly2" | absolute_url }}">HVPG Assembly</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ "/widget" | absolute_url }}">Code C++</a>
+          <ul>
+            <li><a href="{{ "/potentiometer" | absolute_url }}">Digital Potentiometer</a></li>
+            <li><a href="{{ "/pwm" | absolute_url }}">PWM signals</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ "/user_interface" | absolute_url }}">User Interface</a>
+          <ul>
+            <li><a href="{{ "/python" | absolute_url }}">Python Code</a></li>
+            <li><a href="{{ "/master" | absolute_url }}">Master ESP32</a></li>
+            <li><a href="{{ "/slave" | absolute_url }}">Slave ESP32</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
-  
+
   <main>
-    <div class="container">
-      {{ content }}
-    </div>
+    {{ content }}
   </main>
-  
+
   <footer>
-    <div class="container">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </div>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
 </body>
 </html>
