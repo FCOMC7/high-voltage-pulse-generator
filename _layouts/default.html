@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        {% for item in site.nav %}
+          <li>
+            <a href="{{ item.link | relative_url }}">{{ item.title }}</a>
+            {% if item.subnav %}
+              <ul>
+                {% for subitem in item.subnav %}
+                  <li><a href="{{ subitem.link | relative_url }}">{{ subitem.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
