@@ -1,0 +1,41 @@
+title: Multi Channel High Voltage Pulse Generator Board
+description: Documentation for the Multi Channel High Voltage Pulse Generator Board
+baseurl: "" # Subpath of your site, e.g. /blog
+url: "https://fcomc7.github.io/high-voltage-pulse-generator" # Base URL for your site
+markdown: kramdown
+theme: jekyll-theme-minimal # Puedes cambiar el tema a tu preferencia - slate
+
+# Navigation
+nav:
+  - title: Full bridge single-phase inverter
+    link: /testpage1
+    subnav:
+      - title: Schematic of Circuit
+        link: /Schematic
+      - title: Layout of Circuit
+        link: /Layout
+      - title: Assembly PCB
+        link: /Datasheet
+  - title: Control PCB
+    link: /testpage5
+    subnav:
+      - title: General Schematic
+        link: /schematic2
+      - title: HVPG Assembly
+        link: /assembly2
+  - title: Code C++
+    link: /widget
+    subnav:
+      - title: Digital Potentiometer
+        link: /potentiometer
+      - title: PWM signals
+        link: /pwm
+  - title: User Interface
+    link: /user_interface
+    subnav:
+      - title: Python Code
+        link: /python
+      - title: Master ESP32
+        link: /master
+      - title: Slave ESP32
+        link: /slave
